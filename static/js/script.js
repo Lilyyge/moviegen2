@@ -15,16 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayGenres() {
     movieContainer.innerHTML = ""; // Clear previous content
 
-    moviesData.forEach((movie) => {
+    genres.forEach((genre) => {
       const card = document.createElement("li");
       card.classList.add("card");
 
       const img = document.createElement("img");
-      img.src = movie.imgUrl || "https://via.placeholder.com/150";
-      img.alt = movie.name;
+      img.src = genre.imgUrl || "https://via.placeholder.com/150";
+      img.alt = genre.name;
 
       const h3 = document.createElement("h3");
-      h3.textContent = movie.name;
+      h3.textContent = genre.name;
 
       card.appendChild(img);
       card.appendChild(h3);
@@ -39,18 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function createPaginationButtons() {
-  pagination.innerHTML = "";
-  const numPages = Math.ceil(moviesData.length / moviesPerPage);
-  for (let i = 1; i <= numPages; i++) {
-    const button = document.createElement("button");
-    button.textContent = i;
-    button.addEventListener("click", function () {
-      displayMovies(i);
-    });
-    pagination.appendChild(button);
-  }
-}
+
 
 // Initial display
 displayGenres();

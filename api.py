@@ -96,8 +96,8 @@ def recommend_movies(movie_title, alpha=0.6, num_recommendations=5):
     return movies['title'].iloc[recommended_movie_indices].tolist()
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
 
 @app.route('/join', methods=['GET','POST'])
 def my_form_post():

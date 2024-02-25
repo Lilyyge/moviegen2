@@ -26,6 +26,9 @@ header {
   background: #111b1d;
 }
 
+h1 {
+  font-size: 50px;
+}
 .navbar {
   display: flex;
   padding: 0 10px;
@@ -60,7 +63,8 @@ header {
   margin-left: 0;
 }
 
-header a, footer a {
+header a,
+footer a {
   margin-left: 40px;
   text-decoration: none;
   color: #3edde9;
@@ -69,7 +73,8 @@ header a, footer a {
   display: inline-block;
 }
 
-header a:hover, footer a:hover {
+header a:hover,
+footer a:hover {
   color: #6776c7;
 }
 
@@ -133,7 +138,7 @@ header a:hover, footer a:hover {
 
 .content a:hover {
   color: #fff;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 section {
@@ -151,137 +156,79 @@ section > p {
   text-align: center;
 }
 
-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin-top: 50px;
-  padding: 0 10px;
-  justify-content: space-between; 
-} 
-
-
-section.about {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.about .company-info {
-  margin-top: 30px;
-}
-
-.about h3 {
-  margin: 30px 0 10px;
-}
-
-.about .team {
-  text-align: left;
-  width: 100%;
-}
-
-.about .team ul {
-  padding-left: 20px;
+/* .card img {
+  
+  height: 100%; 
+  object-fit: cover;
+  
+  width: 100%; 
+  height: 90%;
 }
 
 section .cards .card {
   background: #fff;
-  padding: 120px 40px;
+  padding: 90px 20px;
   list-style: none;
   border-radius: 5px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
   margin-bottom: 40px;
   width: calc(100% / 3 - 30px);
   text-align: center;
+  box-sizing: border-box; 
+  display: inline-block; 
+  vertical-align: top;
+  
+
 }
 
-.portfolio .cards .card {
-  padding: 0 0 20px;
-}
+.card {
+  width: 200px; 
+  height: 350px;
+  margin: 10px; 
+  margin: 10px; 
+} */
 
-.services .card img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
-  border-radius: 100%;
-  object-fit: cover;
-}
-
-.portfolio .card img {
-  width: 100%;
-  padding-bottom: 10px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 7px;
-}
-
-.cards .card p {
-  padding: 0 15px;
-  margin-top: 5px;
-}
-
-.about .row {
-  padding: 0 10px;
-}
-
-.contact .row {
-  margin: 60px 0 90px;
-  display: flex;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 20px; /* Gap between cards */
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 10px;
+}
+
+/* Movie Card Styles */
+.card {
+  background: #fff;
+  border-radius: 20px; /* Rounded corners */
+  margin: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.card img {
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  height: auto;
+  border-radius: 20px 20px 0 0; /* Rounded top corners */
 }
 
-.contact .row .col {
-  padding: 0 10px;
-  width: calc(100% / 2 - 50px);
+.card .title {
+  padding: 15px;
+  text-align: center;
 }
 
-.contact .col p {
-  margin-bottom: 10px;
-}
-
-.contact .col p i {
-  color: #7a7a7a;
-  margin-right: 10px;
-}
-
-.contact form input {
-  height: 45px;
-  margin-bottom: 20px;
+.card h3 {
+  /* margin: 0;
   padding: 10px;
-  width: 100%;
-  font-size: 16px;
-  outline: none;
-  border: 1px solid #bfbfbf;
+  text-align: center; */
+    margin: 0;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1; /* Allow title to grow to fill remaining space */
+  display: flex;
+  align-items: center
 }
-
-.contact form textarea {
-  padding: 10px;
-  width: 100%;
-  font-size: 16px;
-  height: 150px;
-  outline: none;
-  resize: vertical;
-  border: 1px solid #bfbfbf;
-}
-
-.contact form button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 17px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background: #333;
-  transition: 0.2s ease;
-}
-
-.contact form button:hover {
-  background: #525252;
-}
-
 footer {
   width: 100%;
   display: flex;
@@ -318,7 +265,9 @@ footer a {
     transition: left 0.3s ease;
   }
 
-  .navbar #menu-toggler:checked~.all-links {
+
+  
+  .navbar #menu-toggler:checked ~ .all-links {
     left: 0;
   }
 
@@ -334,12 +283,6 @@ footer a {
     text-align: center;
   }
 
-  section .cards .card {
-    width: calc(100% / 2 - 15px);
-    margin-bottom: 30px;
-
-  }
-  
 
   .homepage .content h1 {
     font-size: 40px;
@@ -378,7 +321,8 @@ footer a {
     width: 100%;
     margin-bottom: 30px;
   }
-}.search-form {
+}
+.search-form {
   display: flex;
   margin-top: 20px;
 }
@@ -405,88 +349,86 @@ footer a {
 }
 
 .search-form {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  .search-input {
-    padding: 10px;
-    width: 300px; /* Adjust width as needed */
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
-  
-  .search-btn {
-    padding: 10px 15px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
-  
-  .search-btn:hover {
-    background-color: #555;
-  }
+  display: flex;
+  margin-top: 20px;
+}
 
-  /* Reset styles */
+.search-input {
+  padding: 10px;
+  width: 300px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #555;
+}
+
+/* Reset styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .movie-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* .movie-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
-  }
-  .movie-card {
+  } */
+/* .movie-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-  }
-  
-  .movie-card img {
+  } */
+
+/* .movie-card img {
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-  }
-  
-  .pagination {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .pagination button {
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .pagination button:hover {
-    background-color: #0056b3;
-  }
-  
-  .pagination button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
-  }
-  
-  
+  } */
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}

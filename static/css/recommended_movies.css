@@ -1,0 +1,125 @@
+/* Recommended Movies CSS */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font family */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set background color */
+body {
+  background: #569ebf;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #111b1d;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #3edde9;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover,
+footer a:hover {
+  color: #6776c7;
+}
+
+/* Movie Cards Container */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Gap between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px; /* Adjust padding as needed */
+}
+
+/* Movie Card Styles */
+.card {
+  background: #fff;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0; /* Rounded top corners */
+}
+
+.card .title {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 column for even smaller screens */
+  }
+}
