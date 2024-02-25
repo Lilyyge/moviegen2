@@ -55,3 +55,5 @@ function createPaginationButtons() {
 // Initial display
 displayGenres();
 createPaginationButtons();
+
+
