@@ -1,22 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const moviesPerPage = 6; // Number of movies per page
-  const moviesData = [
+  const genres = [
     { name: "Documentary", imgUrl: "genre_img/1Documentary.jpg" },
     { name: "IMAX", imgUrl: "genre_img/2IMAX.jpg" },
     { name: "Mystery", imgUrl: "genre_img/3Mystery.jpg" },
     { name: "Musical", imgUrl: "genre_img/4Musical.jpg" },
     { name: "Drama", imgUrl: "genre_img/5Drama.jpg" },
-    
-];
+  ];
 
   const movieContainer = document.getElementById("movieContainer");
   const pagination = document.getElementById("pagination");
-  const viewMoreButton = document.getElementById('viewMoreGenres');
+  const viewMoreButton = document.getElementById("viewMoreGenres");
 
   function displayGenres() {
     movieContainer.innerHTML = ""; // Clear previous content
 
-    moviesData.forEach(movie => {
+    moviesData.forEach((movie) => {
       const card = document.createElement("li");
       card.classList.add("card");
 
@@ -34,35 +33,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-//   viewMoreButton.addEventListener('click', function(event) {
-//     event.preventDefault();
-//     hiddenGenres.forEach(genre => {
-//       genre.classList.toggle('hidden');
-//     });
-//     viewMoreButton.textContent = viewMoreButton.textContent === 'View More' ? 'View Less' : 'View More';
-//   });
-// });
-viewMoreButton.addEventListener('click', function(event) {
-  // Navigate to more_genres.html
-  window.location.href = "more_genres.html";
-});
+  viewMoreButton.addEventListener("click", function (event) {
+    // Navigate to more_genres.html
+    window.location.href = "more_genres.html";
+  });
 });
 
 function createPaginationButtons() {
-    pagination.innerHTML = "";
-    const numPages = Math.ceil(moviesData.length / moviesPerPage);
-    for (let i = 1; i <= numPages; i++) {
-        const button = document.createElement("button");
-        button.textContent = i;
-        button.addEventListener("click", function() {
-            displayMovies(i);
-        });
-        pagination.appendChild(button);
-    }
+  pagination.innerHTML = "";
+  const numPages = Math.ceil(moviesData.length / moviesPerPage);
+  for (let i = 1; i <= numPages; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.addEventListener("click", function () {
+      displayMovies(i);
+    });
+    pagination.appendChild(button);
+  }
 }
 
 // Initial display
 displayGenres();
 createPaginationButtons();
-
-
