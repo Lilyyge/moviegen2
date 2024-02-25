@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recs Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="relatedmovies" href="related_movies.html">
+    <!-- <link href="recommended_movies.html"> -->
+
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar">
+          <h2 class="logo"><a href="#">Cinemalaytics</a></h2>
+          <input type="checkbox" id="menu-toggler">
+          <label for="menu-toggler" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+          </label>
+          <ul class="all-links">
+            <li><a href="#home">Movie Recommender</a></li>
+            <li><a href="#movieContainer">Explore Genres</a></li>
+            <li><a href="#about">About Us</a></li>
+            <!-- <li><a href="#about">About Us</a></li> -->
+           <!-- <li><a href="#contact">Contact Us</a></li>  -->
+          </ul>
+        </nav>
+      </header>
+
+      <section class="homepage" id="home">
+        <div class="content">
+          <div class="text">
+            <h1>Ready for Recommendations?</h1>
+            <p>
+Enter a movie you'd like to find similar recommendations for</p>
+          </div>
+
+          <form action="recommended_movies.html" method="get" class="search-form">
+  <input type="text" name="movie" placeholder="Search..." class="search-input">
+  <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+</form>
+
+        </div>
+      </section>
+
+      </section>
+      <section class="genres" id="movieContainer">
+        <h2>Featured Genres</h2>
+        <p>Recommending some of the most popular genres!</p>
+        <ul class="cards">
+            <!-- Featured genres cards -->
+            <li class="card">
+                <!-- <img src="1Documentary.jpg" alt="Documentary"> -->
+                <h3>Documentary</h3>
+            </li>
+            <li class="card">
+                <!-- <img src="IMAX.jpg" alt="IMAX"> -->
+                <h3>IMAX</h3>
+            </li>
+            <li class="card">
+                <!-- <img src="3Mystery.jpg" alt="Mystery"> -->
+                <h3>Mystery</h3>
+            </li>
+            <li class="card">
+                <!-- <img src="4Musical.jpg" alt="Musical"> -->
+                <h3>Musical</h3>
+            </li>
+            <li class="card">
+                <!-- <img src="5Drama.jpg" alt="Drama"> -->
+                <h3>Drama</h3>
+              
+            </li>
+            <li class="card">
+                <!-- <img src="6War.jpg" alt="War"> -->
+                <h3>War</h3>
+              
+            </li>
+        </ul>
+        <a href="#more_genres.html" id="viewMoreGenres">View More</a>
+    </section>
+
+
+      <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            Introducing our innovative Movie Generator – your gateway to endless cinematic exploration! Seamlessly integrated into our website's front cover, our Movie Generator offers an immersive experience for film enthusiasts of all kinds.
+            
+            With just a click, dive into a world of cinematic wonders as our generator curates personalized movie recommendations tailored to your unique tastes. Whether you're craving heart-pounding action, spine-chilling thrillers, or heartwarming romances, our Movie Generator delivers an array of handpicked selections to satisfy every movie night whim.
+            
+            Powered by advanced algorithms and a vast database of films spanning genres and eras, our Movie Generator ensures that each recommendation is a perfect match for your preferences. Say goodbye to endless scrolling and indecision – with our generator, discovering your next favorite film is effortless and exhilarating.
+            
+            Experience the magic of cinema like never before with our Movie Generator – where every click opens the door to a new cinematic adventure.</p>
+      
+      </section>
+
+      <section> </section>
+
+      <section> </section>
+
+
+      <footer>
+        <div>
+          <span>Copyright © 2024 All Rights Reserved</span>
+          <span class="link">
+              <a href="#">Back up</a>
+              <!-- <a href="#contact">Contact</a> -->
+          </span>
+        </div>
+      </footer>
+
+
+      <script src="script.js"></script>
+
+  </body>
+</html>
