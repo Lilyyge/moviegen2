@@ -7,9 +7,37 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="relatedmovies" href="related_movies.html">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- <link href="recommended_movies.html"> -->
 
   </head>
+
+  <script>
+
+  function movierec() {
+  var text1= $('#text1').val();
+    $.ajax({
+                url: "/join",
+                type: "POST",
+                data: {text1:text1,}
+  
+            }).done(function(response) {
+  
+              var html= "<br><br><br><p> <b> RESULT : <b><p>";
+  
+              response =response.result;
+                    $.each(response,function(val){
+                    console.log(val);
+                      html+="<p>"+val+" " +"<p>"
+  
+                  });
+                  html +="<br>";
+                  $(".show-data").append(html);
+              });
+  };
+    
+    </script>
+
   <body>
 
     <header>
@@ -42,7 +70,7 @@ Enter a movie you'd like to find similar recommendations for</p>
 
           <form action="recommended_movies.html" method="get" class="search-form">
   <input type="text" name="movie" placeholder="Search..." class="search-input">
-  <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+  <button type="submit" class="search-btn" onclick="movierec()"><i class="fas fa-search"></i></button>
 </form>
 
         </div>
