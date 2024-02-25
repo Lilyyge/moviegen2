@@ -27,7 +27,7 @@ genres.forEach(genre => {
     card.classList.add("card");
 
     const img = document.createElement("img");
-    img.src = genre.imgUrl || "https://via.placeholder.com/150"; // Placeholder image URL if no URL is specified
+    // img.src = genre.imgUrl || "https://via.placeholder.com/150"; // Placeholder image URL if no URL is specified
     img.alt = genre.name;
 
     const title = document.createElement("h3");
@@ -36,7 +36,7 @@ genres.forEach(genre => {
     const description = document.createElement("p");
     //description.textContent = "Description of " + genre.name + " genre";
 
-    card.appendChild(img);
+    // card.appendChild(img);
     card.appendChild(title);
     card.appendChild(description);
 
